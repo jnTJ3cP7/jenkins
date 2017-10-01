@@ -1,0 +1,20 @@
+version: '3.3'
+services:
+  deployment-1:
+    tty: true
+    build:
+      context: ./deployment
+    image: deployment-1
+    container_name: deployment-1
+    # volumes:
+    #   - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    ports:
+      - "51022:22"
+    # privileged: true
+  deployment-2:
+    image: centos:7.4.1708
+    container_name: deploy-2
+# networks:
+#   default:
+#     external:
+#       name: common_link
