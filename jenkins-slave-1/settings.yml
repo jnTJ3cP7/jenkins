@@ -1,0 +1,10 @@
+ip: '192.168.33.22'
+vbguest:
+  auto_update: false
+  no_remote: true
+vb:
+  memory: 512
+  cpus: 1
+hostsupdater:
+  aliases:
+    - 'vagrant.jenkins-slave-1.com'
